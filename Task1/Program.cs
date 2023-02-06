@@ -19,19 +19,22 @@ int y = InputNumber("Введите координату у: ");
 // System.Console.Write("Введите координату Y: ");
 // int y = Convert.ToInt32(Console.ReadLine());
 
-if (x > 0 && y > 0)
+
+void FindQuarter (int a, int b)
+{
+if (a > 0 && b > 0)
 {
     System.Console.WriteLine("Точка с такими координатами попадает в 1 четверть");
 }
-else if (x > 0 && y < 0)
+else if (a > 0 && b < 0)
 {
     System.Console.WriteLine("Точка с такими координатами попадает во 2 четверть");
 }
-else if (x < 0 && y > 0)
+else if (a < 0 && b > 0)
 {
     System.Console.WriteLine("Точка с такими координатами попадает в 4 четверть");
 }
-else if (x < 0 && y < 0)
+else if (a < 0 && b < 0)
 {
     System.Console.WriteLine("Точка с такими координатами попадает в 3 четверть");
 }
@@ -39,3 +42,6 @@ else
 {
     System.Console.WriteLine("Точка соответствует началу координат");
 }
+}
+
+FindQuarter (x, y);
