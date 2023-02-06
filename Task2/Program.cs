@@ -4,22 +4,24 @@
 System.Console.WriteLine("Введите номер четверти: ");
 int NumberQuarter = Convert.ToInt32(Console.ReadLine());
 
+string [] array = {"x > 0, y > 0", "x < 0, y > 0", "x < 0, y < 0", "x > 0, y < 0"};
+
 
 if (NumberQuarter == 1)
 {
-    System.Console.Write("x > 0, y > 0");
+    System.Console.Write(array[0]);
 }
 else if (NumberQuarter == 2)
 {
-    System.Console.WriteLine("x < 0, y > 0");
+    System.Console.WriteLine(array[1]);
 }
 else if (NumberQuarter == 3)
 {
-    System.Console.WriteLine("x < 0, y < 0");
+    System.Console.WriteLine(array[2]);
 }
 else if (NumberQuarter == 4)
 {
-    System.Console.WriteLine("x > 0, y < 0");
+    System.Console.WriteLine(array[3]);
 }
 else
 {
