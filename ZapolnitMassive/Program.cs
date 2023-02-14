@@ -20,6 +20,81 @@ void PrintArray(int[] array)
     System.Console.WriteLine("["+string.Join(",", array)+"]");
 }
 
+int SumNegative(int[] array)
+{
+    int result = 0;
+    for(int i = 0; i<array.Length; i++)
+    {
+        if(array[i]<0)
+        {
+            result+=array[i];
+        }
+    }
+    return result;
+}
 
-int[] MyArray = GenerateArray(10, 1, 22);
+int SumPositive(int[] array)
+{
+    int result = 0;
+    for(int i = 0; i<array.Length; i++)
+    {
+        if(array[i]>0)
+        {
+            result+=array[i];
+        }
+    }
+    return result;
+}
+
+
+int[] MyArray = GenerateArray(10, -22, 22);
 PrintArray(MyArray);
+System.Console.WriteLine($"Сумма положительных = {SumPositive(MyArray)}");
+System.Console.WriteLine($"Сумма отрицательных = {SumNegative(MyArray)}");
+
+
+// int SumNegative(int[] array)
+// {
+// int result = 0;
+// for(int i = 0; i<array.Length; i++)
+// {
+// if(array[i]<0)
+// {
+// result+=array[i];
+// }
+// }
+// return result;
+// }
+
+// int SumPositive(int[] array)
+// {
+// int result = 0;
+// for(int i = 0; i<array.Length; i++)
+// {
+// if(array[i]>0)
+// {
+// result+=array[i];
+// }
+// }
+// return result;
+// }
+
+
+// переменная out int - используется в методе void без return, чтобы можно было на эту переменную сослаться 
+// (вытащить перемнную в вывод напр)
+void SumNegativePositive (int[] array, out int SumPositive, out int SumNegative)
+{
+    SumNegative = 0;
+    SumPositive = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] < 0)
+        {
+            SumNegative += array[i]; 
+        }
+        else
+        {
+            SumPositive += array[i];
+        }
+    }
+}
